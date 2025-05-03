@@ -1,0 +1,9 @@
+services:
+  try-k8s-web-client:
+    image: titopow/try-k8s-web-client:latest
+    ports:
+      - 80:80
+    environment:
+      - SERVER_HOST=nginx:80
+  nginx:
+    image: nginx
